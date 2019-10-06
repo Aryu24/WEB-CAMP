@@ -1,0 +1,65 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+.clearfix::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+main{
+	width:960px;
+	margin:50px auto;
+}
+.contents{
+	width:300px;
+	border:1px solid rgb(220,220,220);
+	float:left;
+	margin-right:30px;
+	position:relative;
+}
+.contents:nth-last-child(-n+1){
+	margin:0px;
+}
+.step{
+	position:absolute;
+	background-color:orange;
+	color:#FFFFFF;
+	padding:2px 1px;
+}
+.t1{
+	background-image:url(img/flow01.png);
+}
+.t2{
+	background-image:url(img/flow02.png);
+}
+.t3{
+	background-image:url(img/flow03.png);
+}
+.top-image{
+	height:150px;
+	margin:10px;
+	background-size:cover;
+	background-position:bottom;
+}
+.title{
+	margin:0 10px;
+}
+.text{
+	margin:10px 10px;
+}
+/*レスポンシブ対応*/
+@media screen and (max-width:768px){
+	main{
+		width:100%;
+	}
+	.contents{
+		width:90%;
+		float:none;
+		margin:0 auto;
+		margin-bottom:20px;
+	}
+	.contents:nth-last-child(-n+1){
+		margin:0 auto;
+}
